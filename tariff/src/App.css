@@ -1,38 +1,73 @@
-.App {
-  text-align: center;
+.Tariffs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 190px));
+    margin: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card {
+  /*border: 1px solid black;*/
+  height: 293px;
+  width: 190px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card__header {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /*border: 1px solid black;*/
+  height: 20%;
 }
 
-.App-link {
-  color: #61dafb;
+.header__text {
+  font-weight: 500;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card__main {
+  box-sizing: border-box;
+  height: 45%;
+  padding: 20% 5%;
+  border: 1px solid black;
+}
+
+.main__text {
+  display: flex;
+  justify-content: center;
+}
+
+.main__text span:nth-of-type(2) {
+  font-size: 3rem;
+}
+
+.main__text span:last-of-type {
+  align-self: flex-end;
+}
+
+.main__text span:first-of-type, .main__text span:last-of-type {
+  font-size: 0.9rem;
+}
+
+.card__speed, .card__footer {
+  margin: 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color:rgb(78, 78, 78);
+  font-weight: 500;
+}
+
+.card__speed {
+  padding-top: 15px;
+  background-color: rgb(247, 247, 247);
+  height: 10%;
+}
+
+.card__footer {
+  padding: 7px 0;
+  line-height: 25px;
+  background-color: rgb(231, 231, 231);
+}
+
+.selected {
+  margin-top: -10px;
+  height: 315px;
+  box-shadow: -6px 7px 19px 8px rgba(139, 139, 139, 0.2);
 }
