@@ -1,9 +1,9 @@
 import './App.css';
 import Card from './assets/components/Card';
-import blue from './theme-blue.css';
-import green from './theme-green.css';
-import red from './theme-red.css';
-import black from './theme-black.css';
+import blue from './theme-blue.module.css';
+import green from './theme-green.module.css';
+import red from './theme-red.module.css';
+import black from './theme-black.module.css';
 
 const data = [
   {
@@ -36,7 +36,6 @@ const data = [
 function App() {
   return (
     <div className="Tariffs">
-      <Card price="100" speed="12" key="5" theme={blue}/>
       {
         data.map((tariff) =>
             <Card price={tariff.price} speed={tariff.speed} key={tariff.id} theme={tariff.theme} isSelected={tariff.isSelected}></Card>

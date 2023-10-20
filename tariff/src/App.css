@@ -5,16 +5,16 @@
 }
 
 .card {
-  /*border: 1px solid black;*/
   height: 293px;
   width: 190px;
+  color: white;
 }
 
 .card__header {
   display: flex;
   align-items: center;
   justify-content: center;
-  /*border: 1px solid black;*/
+  border: 1px solid white;
   height: 20%;
 }
 
@@ -26,7 +26,7 @@
   box-sizing: border-box;
   height: 45%;
   padding: 20% 5%;
-  border: 1px solid black;
+  border-left: 1px solid white;
 }
 
 .main__text {
