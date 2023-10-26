@@ -23,7 +23,6 @@ const data = [
     speed: 100,
     id: 3, 
     theme: red,
-    isSelected: true
   },
   {
     price: 1000,
@@ -38,7 +37,7 @@ function App() {
     <div className="Tariffs">
       {
         data.map((tariff) =>
-            <Card price={tariff.price} speed={tariff.speed} key={tariff.id} theme={tariff.theme} isSelected={tariff.isSelected}></Card>
+            <Card price={tariff.price} speed={tariff.speed} key={tariff.id} theme={tariff.theme}></Card>
         )
       }
     </div>
