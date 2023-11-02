@@ -1,3 +1,4 @@
+import {useState} from 'react';
 import './App.css';
 import Card from './assets/components/Card';
 import blue from './theme-blue.module.css';
@@ -33,11 +34,16 @@ const data = [
 ]
 
 function App() {
+  const [selectedCardId, setSelectedCardId] = useState(null);
+
+  const handleCardClick = (id) => {
+    setSelectedCardId(id);
+  }
   return (
     <div className="Tariffs">
       {
         data.map((tariff) =>
-            <Card price={tariff.price} speed={tariff.speed} key={tariff.id} theme={tariff.theme}></Card>
+            <Card price={tariff.price} speed={tariff.speed} key={tariff.id} theme={tariff.theme} isSelected={tariff.id === selectedCardId} onClick={() => handleCardClick(tariff.id)}/>
         )
       }
     </div>

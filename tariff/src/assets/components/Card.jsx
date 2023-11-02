@@ -1,15 +1,8 @@
-import React, { useState } from "react";
-
 function Card(props) {
-    const {price, speed, theme} = props;
-    const [selected, setSelected] = useState(false);
-
-    const handleClick = () => {
-        setSelected(!selected);
-    }
+    const {price, speed, theme, isSelected, onClick} = props;
     
     return (
-        <div className={selected ? 'card selected' : 'card'} onClick={handleClick}>
+        <div className={isSelected ? 'card selected' : 'card'} onClick={onClick}>
             <div className={"card__header " + theme.headerBg}>
                 <p className="header__text">Безлимитный {price}</p>
              </div>   
